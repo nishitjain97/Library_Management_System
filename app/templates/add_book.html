@@ -1,0 +1,15 @@
+<h2>Add New Book</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.title.label }} {{ form.title() }}<br>
+    {{ form.author.label }} {{ form.author() }}<br>
+    {{ form.isbn.label }} {{ form.isbn() }}<br>
+    {{ form.genre.label }} {{ form.genre() }}<br>
+    {{ form.publisher.label }} {{ form.publisher() }}<br>
+    {{ form.year.label }} {{ form.year() }}<br>
+    {{ form.copies.label }} {{ form.copies() }}<br>
+    {{ form.submit() }}
+</form>
+<form action="{{ url_for('main.logout') }}" method="get">
+    <button type="submit">Logout</button>
+</form>
